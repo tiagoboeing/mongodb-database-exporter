@@ -1,0 +1,21 @@
+{
+  "name": "migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mongo:backup": "ts-node mongo-backup.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node-emoji": "^1.8.1",
+    "node-emoji": "^1.11.0"
+  }
+}

@@ -11,6 +11,8 @@
 ### Fixes
 
 - Fixed `execute()` function on `index.ts`.
+- Added `ts-node` dependencie
+- Added `typescript` dev dependencie
 
 ## 1.0.2
 

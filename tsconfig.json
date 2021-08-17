@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "allowJs": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "declaration": true,
     "esModuleInterop": true,
     "moduleResolution": "node",

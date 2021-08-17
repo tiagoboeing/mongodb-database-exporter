@@ -6,6 +6,26 @@ Export all collections from a MongoDB database and save on local file (`.json`).
 
 > This use simple `find({})` operations for each collection. Dangerous for large databases performance! Be careful!
 
+## NPM
+
+Install:
+
+```bash
+npm i @tiagoboeing/mongodb-database-exporter --save-dev
+```
+
+Use in your JS/TS:
+
+```js
+// ES6 syntax (recommended)
+import { mongoDBExporter } from './mongo-exporter'
+mongoDBExporter.execute()
+
+// ES5 syntax
+const { mongoDBExporter } = require('@tiagoboeing/mongodb-database-exporter')
+mongoDBExporter.execute()
+```
+
 ## Running locally
 
 `.env` file is the default strategy to resolve values. When you pass a `configs` on `execute()` this will be used.

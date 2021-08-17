@@ -1,5 +1,11 @@
 # MongoDB database exporter
 
+## 1.0.1
+
+[17/08/2021]
+
+- Fix `exporter` to use without `default`.
+
 ## 1.0.0
 
 [17/08/2021]

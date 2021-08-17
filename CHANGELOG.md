@@ -1,6 +1,6 @@
 # MongoDB database exporter
 
-## Unreleased
+## 1.0.3
 
 [17/08/2021]
 

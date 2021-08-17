@@ -21,3 +21,14 @@ npm start
 ```
 
 You can make changes on `src/index.ts` to pass parameters without using DotEnv.
+
+### Available properties
+
+| SDK property               | .env property        | Type      | Description                                                           | Required | Default               |
+| -------------------------- | -------------------- | --------- | --------------------------------------------------------------------- | -------- | --------------------- |
+| `folderPath`               | `FOLDER_PATH`        | `string`  | Change default folder path to save files. Failed if folder not found! | No       | `%PROJECT_ROOT%/data` |
+| `removeFileBefore`         | `REMOVE_FILE_BEFORE` | `boolean` | Remove matches files on folder before save.                           | No       | `true`                |
+| `mongoConnection.hostname` | `HOSTNAME`           | `string`  | MongoDB hostname to connect.                                          | Yes      | N/A                   |
+| `mongoConnection.username` | `USERNAME`           | `string`  | MongoDB username.                                                     | Yes      | N/A                   |
+| `mongoConnection.password` | `PASSWORD`           | `string`  | MongoDB password.                                                     | Yes      | N/A                   |
+| `mongoConnection.database` | `DATABASE`           | `string`  | MongoDB database to select.                                           | Yes      | N/A                   |

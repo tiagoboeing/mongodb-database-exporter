@@ -41,10 +41,9 @@ export async function saveDataToFile (
   fileName: string,
   data: any,
   removeFileBefore = true,
-  folderPath?: string
+  folderPath = DEFAULT_FOLDER
 ) {
   try {
-    if (!folderPath) folderPath = DEFAULT_FOLDER
     const file = path.resolve(folderPath, `${fileName}.json`)
 
     if (removeFileBefore) {

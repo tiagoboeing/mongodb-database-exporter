@@ -10,11 +10,15 @@ const getCollections = async (db: Db) => db.listCollections().toArray()
 const extractCollectionItems = (db: Db, collection: CollectionInfo, query = {}) =>
   db.collection(collection.name).find(query).toArray()
 
-const startColectionBackup = async (db: Db, collection: CollectionInfo) => {
+const startColectionBackup = async (
+  db: Db,
+  collection: CollectionInfo,
+  configs: ExecuteConfigs
+) => {
   const data = await extractCollectionItems(db, collection)
   console.log(chalk.yellow(`Data extracted from ${collection.name}!`))
 
-  return saveDataToFile(collection.name, data)
+  return saveDataToFile(collection.name, data, configs.removeFileBefore, configs.folderPath)
 }
 
 const main = async (configs: ExecuteConfigs) => {
@@ -41,7 +45,7 @@ const main = async (configs: ExecuteConfigs) => {
   const collections = await getCollections(db)
   if (collections?.length > 0) {
     for (const collection of collections) {
-      await startColectionBackup(db, collection)
+      await startColectionBackup(db, collection, configs)
     }
   }
 
@@ -51,8 +55,10 @@ const main = async (configs: ExecuteConfigs) => {
 }
 
 const execute = async (configs?: ExecuteConfigs) => {
-  if (!configs || !configs.mongoConnection) {
+  if (!configs) {
     configs = {
+      folderPath: configs?.folderPath || process.env.FOLDER_PATH,
+      removeFileBefore: configs?.removeFileBefore || !!process.env.REMOVE_FILE_BEFORE,
       mongoConnection: {
         hostname: configs?.mongoConnection?.hostname || process.env.HOSTNAME || '',
         username: configs?.mongoConnection?.username || process.env.USERNAME || '',

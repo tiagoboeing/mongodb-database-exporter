@@ -1,14 +1,18 @@
 {
-  "name": "migrations",
+  "name": "@tiagoboeing/mongodb-database-exporter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exports all MongoDB collections for JSON files.",
   "main": "index.js",
   "scripts": {
-    "mongo:backup": "ts-node mongo-backup.ts"
+    "start": "ts-node src/index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mongodb",
+    "database-exporter",
+    "backup"
+  ],
+  "author": "Tiago Boeing <contato@tiagoboeing.com>",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
     "dotenv": "^10.0.0",
@@ -16,6 +20,13 @@
     "node-emoji": "^1.11.0"
   },
   "devDependencies": {
-    "@types/node-emoji": "^1.8.1"
+    "@types/node-emoji": "^1.8.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   }
 }

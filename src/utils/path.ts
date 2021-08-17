@@ -3,9 +3,9 @@ import path from 'path'
 import chalk from 'chalk'
 import { promisify } from 'util'
 
-export const DEFAULT_FOLDER = path.resolve(__dirname, '../data')
+export const DEFAULT_FOLDER = path.resolve(__dirname, '../../data')
 
-export async function clearFolder(folderPath?: string) {
+export async function clearFolder (folderPath?: string) {
   chalk.yellow(`Removing ".json" files on folder: "${folderPath}"`)
   if (!folderPath) folderPath = DEFAULT_FOLDER
 
@@ -15,7 +15,7 @@ export async function clearFolder(folderPath?: string) {
     const fileType = file.split('.').pop()
 
     if (fileType === 'json') {
-      return promisify(fs.rmSync)(path.resolve(folderPath, file), {
+      return promisify(fs.rmSync)(path.resolve(folderPath!, file), {
         recursive: true,
         force: true
       })
@@ -27,7 +27,7 @@ export async function clearFolder(folderPath?: string) {
   })
 }
 
-export async function removeFile(fullPath: string) {
+export async function removeFile (fullPath: string) {
   try {
     return promisify(fs.rm)(fullPath, {
       force: true
@@ -37,7 +37,7 @@ export async function removeFile(fullPath: string) {
   }
 }
 
-export async function saveDataToFile(
+export async function saveDataToFile (
   fileName: string,
   data: any,
   removeFileBefore = true,
@@ -48,7 +48,7 @@ export async function saveDataToFile(
     const file = path.resolve(folderPath, `${fileName}.json`)
 
     if (removeFileBefore) {
-      console.log(chalk.red(`Removing existing files before...`))
+      console.log(chalk.red('Removing existing files before...'))
       await removeFile(file)
     }
 

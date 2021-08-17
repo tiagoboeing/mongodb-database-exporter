@@ -2,8 +2,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "allowJs": true,
-    "module": "commonJS",
+    "module": "ESNext",
+    "declaration": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "outDir": "./dist"
   }
 }

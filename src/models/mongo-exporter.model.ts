@@ -8,3 +8,7 @@ export interface ExecuteConfigs {
     database: string
   }
 }
+
+export interface ModuleDeclaration {
+  execute: (configs?: ExecuteConfigs) => Promise<void>
+}

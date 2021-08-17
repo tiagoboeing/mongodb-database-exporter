@@ -1,11 +1,15 @@
 {
   "name": "@tiagoboeing/mongodb-database-exporter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Exports all MongoDB collections for JSON files.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
   },
+  "files": [
+    "./dist"
+  ],
   "keywords": [
     "mongodb",
     "database-exporter",

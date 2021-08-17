@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import { CollectionInfo, Db, MongoClient } from 'mongodb'
 import emoji from 'node-emoji'
-import { ExecuteConfigs } from './models/execute.model'
+import { ExecuteConfigs, ModuleDeclaration } from './models/mongo-exporter.model'
 import { saveDataToFile } from './utils/path'
 require('dotenv').config()
 
@@ -54,7 +54,7 @@ const main = async (configs: ExecuteConfigs) => {
   return chalk.bgGreen.black(`${emoji.get(':white_check_mark')} All data backup done!`)
 }
 
-const execute = async (configs?: ExecuteConfigs) => {
+const execute = async (configs?: ExecuteConfigs): Promise<void> => {
   if (!configs) {
     configs = {
       folderPath: configs?.folderPath || process.env.FOLDER_PATH,
@@ -71,7 +71,7 @@ const execute = async (configs?: ExecuteConfigs) => {
   return main(configs!).then(console.log).finally().catch(console.error)
 }
 
-const mongoDBExporter = {
+const mongoDBExporter: ModuleDeclaration = {
   execute
 }
 

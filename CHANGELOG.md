@@ -1,14 +1,30 @@
 # MongoDB database exporter
 
+## Unreleased
+
+[17/08/2021]
+
+### Enhancements
+
+- Added note about supported platforms.
+
+### Fixes
+
+- Fixed `execute()` function on `index.ts`.
+
 ## 1.0.2
 
 [17/08/2021]
+
+### Fixes
 
 - Fixed `README` instructions about module imports.
 
 ## 1.0.1
 
 [17/08/2021]
+
+### Fixes
 
 - Fix `exporter` to use without `default`.
 

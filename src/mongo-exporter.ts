@@ -71,4 +71,8 @@ const execute = async (configs?: ExecuteConfigs) => {
   return main(configs!).then(console.log).finally().catch(console.error)
 }
 
-export default execute
+const mongoDBExporter = {
+  execute
+}
+
+export default mongoDBExporter

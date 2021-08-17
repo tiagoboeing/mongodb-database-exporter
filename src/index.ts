@@ -1,3 +1,3 @@
-import execute from './mongo-exporter'
+import mongoDBExporter from './mongo-exporter'
 
-execute()
+mongoDBExporter.execute()

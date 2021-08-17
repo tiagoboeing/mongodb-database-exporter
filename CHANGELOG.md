@@ -1,5 +1,11 @@
 # MongoDB database exporter
 
+## 1.0.2
+
+[17/08/2021]
+
+- Fixed `README` instructions about module imports.
+
 ## 1.0.1
 
 [17/08/2021]

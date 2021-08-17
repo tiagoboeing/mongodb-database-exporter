@@ -18,7 +18,7 @@ Use in your JS/TS:
 
 ```js
 // ES6 syntax (recommended)
-import { mongoDBExporter } from './mongo-exporter'
+import { mongoDBExporter } from '@tiagoboeing/mongodb-database-exporter'
 mongoDBExporter.execute()
 
 // ES5 syntax

@@ -12,7 +12,7 @@
 
 - Fixed `execute()` function on `index.ts`.
 - Added `ts-node` to dependencies.
-- Added `typescript` dev dependencie
+- Added `typescript` to dev dependencies.
 
 ## 1.0.2
 

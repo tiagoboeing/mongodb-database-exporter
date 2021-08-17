@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Exports all MongoDB collections for JSON files.",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc"

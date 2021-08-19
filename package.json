@@ -12,7 +12,7 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "publish": "npm run build"
+    "prepublish": "npm run build"
   },
   "files": [
     "dist/"

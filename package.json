@@ -1,6 +1,6 @@
 {
   "name": "@tiagoboeing/mongodb-database-exporter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Exports all MongoDB collections for JSON files.",
   "main": "index.js",
   "publishConfig": {

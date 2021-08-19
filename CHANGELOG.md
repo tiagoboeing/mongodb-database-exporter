@@ -2,6 +2,8 @@
 
 ## 1.0.5
 
+[19/08/2021]
+
 ### Enhancements
 
 - Exports Typescript types declarations.
@@ -13,7 +15,6 @@
 ### Fixes
 
 - Fixed published files on NPM.
-
 
 ## 1.0.3
 

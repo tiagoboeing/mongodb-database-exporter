@@ -27,11 +27,11 @@ Use in your JS/TS:
 
 ```js
 // ES6 syntax (recommended)
-import { mongoDBExporter } from '@tiagoboeing/mongodb-database-exporter'
+import mongoDBExporter from '@tiagoboeing/mongodb-database-exporter/dist/mongo-exporter'
 mongoDBExporter.execute()
 
 // ES5 syntax
-const { mongoDBExporter } = require('@tiagoboeing/mongodb-database-exporter')
+const { mongoDBExporter } = require('@tiagoboeing/mongodb-database-exporter/dist/mongo-exporter')
 mongoDBExporter.execute()
 ```
 

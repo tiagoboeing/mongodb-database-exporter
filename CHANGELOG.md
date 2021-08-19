@@ -1,5 +1,11 @@
 # MongoDB database exporter
 
+## 1.0.5
+
+### Enhancements
+
+- Exports Typescript types declarations.
+
 ## 1.0.4
 
 [19/08/2021]

@@ -8,10 +8,11 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm run build && npm publish"
   },
   "files": [
-    "./dist"
+    "dist/"
   ],
   "keywords": [
     "mongodb",

@@ -1,5 +1,14 @@
 # MongoDB database exporter
 
+## 1.0.4
+
+[19/08/2021]
+
+### Fixes
+
+- Fixed published files on NPM.
+
+
 ## 1.0.3
 
 [17/08/2021]
